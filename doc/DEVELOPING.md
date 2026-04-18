@@ -52,6 +52,19 @@ pnpm dev:stop
 
 `pnpm dev:once` now tracks backend-relevant file changes and pending migrations. When the current boot is stale, the board UI shows a `Restart required` banner. You can also enable guarded auto-restart in `Instance Settings > Experimental`, which waits for queued/running local agent runs to finish before restarting the dev server.
 
+## Windows Helper Scripts
+
+For this fork's Windows helper workflow, see [`doc/WINDOWS-RUNBOOK.md`](./WINDOWS-RUNBOOK.md).
+
+The official upstream path remains:
+
+```sh
+pnpm install
+pnpm dev
+```
+
+The Windows helpers wrap a repo-local `.paperclip-local` instance and are intended for local convenience only.
+
 Tailscale/private-auth dev mode:
 
 ```sh

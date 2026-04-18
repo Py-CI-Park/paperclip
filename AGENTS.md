@@ -164,6 +164,18 @@ When creating a pull request (via `gh pr create` or any other method), you **mus
 - **Model Used** — the AI model that produced or assisted with the change (provider, exact model ID, context window, capabilities). Write "None — human-authored" if no AI was used.
 - **Checklist** — all items checked
 
+## Upstream Maintenance
+
+This fork tracks `paperclipai/paperclip` as `upstream`. Before update, run:
+
+```sh
+git fetch upstream --prune
+git rebase upstream/master
+corepack pnpm install
+```
+
+After update, verify startup and tests using [`doc/UPSTREAM-MAINTENANCE.md`](doc/UPSTREAM-MAINTENANCE.md). Keep Windows helper behavior documented in [`doc/WINDOWS-RUNBOOK.md`](doc/WINDOWS-RUNBOOK.md).
+
 ## 11. Definition of Done
 
 A change is done when all are true:
